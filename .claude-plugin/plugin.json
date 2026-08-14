@@ -1,0 +1,25 @@
+{
+  "name": "content-media",
+  "version": "0.1.0",
+  "description": "Content and audience ContentPack: articles, drafts, series, editorial calendar, subscribers, segments, and performance metrics.",
+  "author": {
+    "name": "Rick Hightower",
+    "url": "https://github.com/RichardHightower"
+  },
+  "homepage": "https://github.com/SpillwaveSolutions/content-media",
+  "repository": "https://github.com/SpillwaveSolutions/content-media",
+  "license": "MIT",
+  "keywords": [
+    "content",
+    "article",
+    "substack",
+    "medium",
+    "subscriber",
+    "editorial",
+    "claude-code",
+    "grok-build",
+    "codex",
+    "okf",
+    "content-pack"
+  ]
+}

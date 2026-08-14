@@ -1,0 +1,106 @@
+{
+  "version": "0.1.0",
+  "plugin": "content-media",
+  "types": [
+    {
+      "type": "Article",
+      "folder": null,
+      "description": "Published or publishable piece"
+    },
+    {
+      "type": "Draft",
+      "folder": null,
+      "description": "Work in progress"
+    },
+    {
+      "type": "Series",
+      "folder": null,
+      "description": "Named sequence of articles"
+    },
+    {
+      "type": "EditorialCalendar",
+      "folder": null,
+      "description": "Planned publish dates"
+    },
+    {
+      "type": "Headline",
+      "folder": null,
+      "description": "Title variant"
+    },
+    {
+      "type": "Hook",
+      "folder": null,
+      "description": "Opening hook"
+    },
+    {
+      "type": "Outline",
+      "folder": null,
+      "description": "Structure of a piece"
+    },
+    {
+      "type": "KeyPoint",
+      "folder": null,
+      "description": "Claim the piece must land"
+    },
+    {
+      "type": "CallToAction",
+      "folder": null,
+      "description": "What the reader should do"
+    },
+    {
+      "type": "Subscriber",
+      "folder": null,
+      "description": "Audience member or segment proxy"
+    },
+    {
+      "type": "Segment",
+      "folder": null,
+      "description": "Audience cohort"
+    },
+    {
+      "type": "AudienceInsight",
+      "folder": null,
+      "description": "What the audience cares about"
+    },
+    {
+      "type": "PerformanceMetric",
+      "folder": null,
+      "description": "Views, reads, restacks, etc."
+    },
+    {
+      "type": "DistributionChannel",
+      "folder": null,
+      "description": "Medium, Substack, LinkedIn, etc."
+    },
+    {
+      "type": "PromotionPlan",
+      "folder": null,
+      "description": "How a piece will be pushed"
+    },
+    {
+      "type": "RepurposingNote",
+      "folder": null,
+      "description": "How to slice the piece"
+    },
+    {
+      "type": "StyleGuide",
+      "folder": null,
+      "description": "Voice and format rules"
+    },
+    {
+      "type": "PositioningStatement",
+      "folder": null,
+      "description": "How we talk about the offer"
+    },
+    {
+      "type": "ContentExperiment",
+      "folder": null,
+      "description": "A/B or format test"
+    },
+    {
+      "type": "Feedback",
+      "folder": null,
+      "description": "Reader or editor feedback"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "cme-plugin-marketplace",
+  "description": "Content Media plugins for Claude Code (Grok Build compatible via Claude plugin zero-config)",
+  "owner": {
+    "name": "Rick Hightower",
+    "url": "https://github.com/RichardHightower"
+  },
+  "plugins": [
+    {
+      "name": "content-media",
+      "source": "./",
+      "description": "Content and audience ContentPack: articles, drafts, series, editorial calendar, subscribers, segments, and performance metrics.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Rick Hightower"
+      },
+      "homepage": "https://github.com/SpillwaveSolutions/content-media",
+      "repository": "https://github.com/SpillwaveSolutions/content-media",
+      "license": "MIT",
+      "keywords": [
+        "content",
+        "article",
+        "substack",
+        "medium",
+        "subscriber",
+        "editorial",
+        "claude-code",
+        "grok-build",
+        "codex",
+        "okf",
+        "content-pack"
+      ],
+      "category": "productivity"
+    }
+  ]
+}
