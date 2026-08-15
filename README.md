@@ -86,7 +86,7 @@ python3 scripts/cme_common.py write \
   --type Article \
   --folder articles \
   --title "Example" \
-  --author "Grok Bot: Content Media"
+  --author "${SECOND_BRAIN_IDENTITY:?claim an identity first: brain.py whoami --claim}"
 ```
 
 Never invent `rel` values. Never write types owned by another plugin.
