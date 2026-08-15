@@ -1,105 +1,105 @@
 {
-  "version": "0.1.0",
+  "version": "0.3.0",
   "plugin": "content-media",
   "types": [
     {
       "type": "Article",
-      "folder": null,
+      "folder": "articles",
       "description": "Published or publishable piece"
     },
     {
       "type": "Draft",
-      "folder": null,
+      "folder": "drafts",
       "description": "Work in progress"
     },
     {
       "type": "Series",
-      "folder": null,
+      "folder": "series",
       "description": "Named sequence of articles"
     },
     {
       "type": "EditorialCalendar",
-      "folder": null,
+      "folder": "editorial-calendars",
       "description": "Planned publish dates"
     },
     {
       "type": "Headline",
-      "folder": null,
+      "folder": "headlines",
       "description": "Title variant"
     },
     {
       "type": "Hook",
-      "folder": null,
+      "folder": "hooks",
       "description": "Opening hook"
     },
     {
       "type": "Outline",
-      "folder": null,
+      "folder": "outlines",
       "description": "Structure of a piece"
     },
     {
       "type": "KeyPoint",
-      "folder": null,
+      "folder": "key-points",
       "description": "Claim the piece must land"
     },
     {
       "type": "CallToAction",
-      "folder": null,
+      "folder": "call-to-actions",
       "description": "What the reader should do"
     },
     {
       "type": "Subscriber",
-      "folder": null,
+      "folder": "subscribers",
       "description": "Audience member or segment proxy"
     },
     {
       "type": "Segment",
-      "folder": null,
+      "folder": "segments",
       "description": "Audience cohort"
     },
     {
       "type": "AudienceInsight",
-      "folder": null,
+      "folder": "audience-insights",
       "description": "What the audience cares about"
     },
     {
       "type": "PerformanceMetric",
-      "folder": null,
+      "folder": "articles",
       "description": "Views, reads, restacks, etc."
     },
     {
       "type": "DistributionChannel",
-      "folder": null,
+      "folder": "distribution-channels",
       "description": "Medium, Substack, LinkedIn, etc."
     },
     {
       "type": "PromotionPlan",
-      "folder": null,
+      "folder": "promotion-plans",
       "description": "How a piece will be pushed"
     },
     {
       "type": "RepurposingNote",
-      "folder": null,
+      "folder": "repurposing-notes",
       "description": "How to slice the piece"
     },
     {
       "type": "StyleGuide",
-      "folder": null,
+      "folder": "style-guides",
       "description": "Voice and format rules"
     },
     {
       "type": "PositioningStatement",
-      "folder": null,
+      "folder": "positioning-statements",
       "description": "How we talk about the offer"
     },
     {
       "type": "ContentExperiment",
-      "folder": null,
+      "folder": "content-experiments",
       "description": "A/B or format test"
     },
     {
       "type": "Feedback",
-      "folder": null,
+      "folder": "feedbacks",
       "description": "Reader or editor feedback"
     }
   ]
