@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "content-media",
+  "version": "0.2.0",
+  "description": "Content and audience ContentPack: articles, drafts, series, subscribers, performance.",
+  "author": {
+    "name": "Rick Hightower",
+    "url": "https://github.com/RichardHightower"
+  },
+  "homepage": "https://github.com/SpillwaveSolutions/content-media",
+  "repository": "https://github.com/SpillwaveSolutions/content-media",
+  "license": "MIT",
+  "keywords": [
+    "content",
+    "articles",
+    "second-brain",
+    "agent-plugins"
+  ]
+}
