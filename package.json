@@ -1,6 +1,6 @@
 {
   "name": "content-media",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "description": "Content Media \u2014 Claude Code / Grok Build / Codex plugin",
   "scripts": {
