@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "content-media",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Content and audience ContentPack: articles, drafts, series, subscribers, performance.",
   "author": {
     "name": "Rick Hightower",
