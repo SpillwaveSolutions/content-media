@@ -11,7 +11,7 @@
       "name": "content-media",
       "source": "./",
       "description": "Content and audience ContentPack: articles, drafts, series, editorial calendar, subscribers, segments, and performance metrics.",
-      "version": "0.3.3",
+      "version": "0.3.4",
       "author": {
         "name": "Rick Hightower"
       },
@@ -29,7 +29,9 @@
         "grok-build",
         "codex",
         "okf",
-        "content-pack"
+        "content-pack",
+        "worklog",
+        "wiki-ticket-sdd"
       ],
       "category": "productivity"
     }

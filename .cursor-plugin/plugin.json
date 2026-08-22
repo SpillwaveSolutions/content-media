@@ -1,6 +1,6 @@
 {
   "name": "content-media",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Content and audience ContentPack: articles, drafts, series, subscribers, performance.",
   "author": {
     "name": "Rick Hightower"
@@ -13,7 +13,9 @@
     "articles",
     "second-brain",
     "agent-plugins",
-    "cursor"
+    "cursor",
+    "worklog",
+    "wiki-ticket-sdd"
   ],
   "skills": "skills/",
   "rules": ".cursor/rules/",
