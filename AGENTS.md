@@ -8,7 +8,10 @@ This repository is a dual-host agent plugin (Claude Code + Grok Build + Codex).
 - Write only the noun types listed in README.md.
 - Use absolute in-bundle paths for links (`/clients/acme.md`).
 - Deterministic writes go through `scripts/cme_common.py`.
+- Article → Finding links go through `scripts/cme_bridge.py` (`draws_from` only).
 - Do not invent relationship names.
+- Do not persist `informs` (query-only inverse derived by research-graph).
+- Do not write RKC nouns (Claim, Evidence, Finding, …).
 - Do not hard-code real client or company names in samples. Use fictional examples.
 - Identity of the writer belongs in `author` frontmatter.
 
@@ -20,6 +23,8 @@ This repository is a dual-host agent plugin (Claude Code + Grok Build + Codex).
 - `templates/` — Markdown templates
 - `sample-knowledge/` — fictional demo bundle
 - `scripts/cme_common.py` — init / write / pack / validate
+- `scripts/cme_bridge.py` — Article → draws_from → Finding
+- `docs/adr/002-article-bridge.md` — canonical stored edge
 
 <!-- worklog:policy:start -->
 ## WikiTicket SDD (worklog)
@@ -34,4 +39,3 @@ This plugin tracks implementation with [WikiTicket SDD](https://github.com/Spill
 - After changing work items, run `worklog roadmap-render` and commit the log and roadmap together.
 - CLI: `worklog` on PATH, or `python3 <wiki_ticket_sdd>/bin/worklog`.
 <!-- worklog:policy:end -->
-

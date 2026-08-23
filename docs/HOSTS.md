@@ -12,3 +12,7 @@ If Claude Code ships `hooks/hooks.json`, this plugin also ships:
 ## WikiTicket SDD
 
 Track work with the worklog plugin (`SpillwaveSolutions/wiki_ticket_sdd`). See [WORKLOG.md](WORKLOG.md).
+
+## Article bridge (Phase 5)
+
+`/cme-bridge` is the only write path for Article → Finding. Hosts must not persist `informs`.

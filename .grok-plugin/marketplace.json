@@ -1,13 +1,13 @@
 {
   "name": "cme-plugin-marketplace",
   "description": "Optional native Grok marketplace metadata. Grok Build already loads Claude plugins with zero config.",
-  "version": "0.3.4",
+  "version": "0.4.0",
   "plugins": [
     {
       "name": "content-media",
       "source": ".",
-      "description": "Content and audience ContentPack: articles, drafts, series, editorial calendar, subscribers, segments, and performance metrics.",
-      "version": "0.3.4",
+      "description": "Content and audience ContentPack: articles, drafts, series, editorial calendar, subscribers, segments, and performance metrics. Owns Article → draws_from → Finding.",
+      "version": "0.4.0",
       "compatibility": {
         "claude_plugin": true,
         "zero_config": true

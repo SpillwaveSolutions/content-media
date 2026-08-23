@@ -1,5 +1,5 @@
 {
-  "version": "0.3.1",
+  "version": "0.4.0",
   "plugin": "content-media",
   "types": [
     {
@@ -101,6 +101,59 @@
       "type": "Feedback",
       "folder": "feedbacks",
       "description": "Reader or editor feedback"
+    }
+  ],
+  "rels": [
+    {
+      "rel": "authored_by",
+      "description": "Writer identity"
+    },
+    {
+      "rel": "belongs_to",
+      "description": "Article in a series"
+    },
+    {
+      "rel": "promotes",
+      "description": "Article promotes an offer or idea"
+    },
+    {
+      "rel": "engaged_with",
+      "description": "Subscriber engaged with article"
+    },
+    {
+      "rel": "distributed_on",
+      "description": "Channel"
+    },
+    {
+      "rel": "measured_by",
+      "description": "Has performance metrics"
+    },
+    {
+      "rel": "originates_from",
+      "description": "Came from experiment or outline"
+    },
+    {
+      "rel": "related_to",
+      "description": "Related pieces"
+    },
+    {
+      "rel": "supersedes",
+      "description": "Updated version"
+    },
+    {
+      "rel": "draws_from",
+      "from": "Article",
+      "to": "Finding",
+      "owner": "content-media",
+      "description": "Canonical stored edge to an RKC Finding. Never persist informs."
+    }
+  ],
+  "query_only_rels": [
+    {
+      "rel": "informs",
+      "from": "Finding",
+      "to": "Article",
+      "description": "Query-only inverse of draws_from. Derived by research-graph. Never persist."
     }
   ]
 }

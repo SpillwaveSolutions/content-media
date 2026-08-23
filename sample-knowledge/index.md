@@ -12,3 +12,7 @@ Fictional concepts only. Safe to pack and validate.
 ## Linked Northstar story
 
 Pack from `Northstar Article` (2 hops) to walk the sample graph.
+
+## Phase 5 Article bridge
+
+`Lumenfield civic-loop brief` (`article.loop-policy.01J8X00000000000000000000B`) draws from RKC Finding `finding.loop-policy.01J8X000000000000000000005`. The Finding lives in research-knowledge-capture; this pack stores only the outbound `draws_from` edge.

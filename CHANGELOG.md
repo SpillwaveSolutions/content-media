@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.4.0 — 2026-08-23
+
+Phase 5 Article bridge (RKC ADR 002). Adds to the existing 20-type ContentPack; does not replace it.
+
+- Register `draws_from` (Article → Finding). content-media owns the write.
+- `informs` is a query-only inverse derived by `research-graph`. Never persist. Validate fail-closes on it.
+- `scripts/cme_bridge.py` writes the edge idempotently. Finding-id target only.
+- Skill `/cme-bridge` + command `commands/cme-bridge.md`.
+- Fiction sample `articles/loop-policy-article.md` draws from `finding.loop-policy.01J8X000000000000000000005`.
+- Docs: `docs/typed-edges.md`, `docs/adr/002-article-bridge.md`.
+
 ## 0.3.4
 
 - WikiTicket SDD (worklog) is the tracking system for this plugin.

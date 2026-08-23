@@ -24,6 +24,7 @@ python3 "${CLAUDE_PLUGIN_ROOT}/scripts/cme_common.py" write \
 ```
 
 4. Add typed links in a follow-up edit if needed (`rel` values from `docs/typed-edges.md`).
-5. Validate.
+5. To cite an RKC Finding, use `/cme-bridge` — do not hand-write `draws_from` or `informs`.
+6. Validate.
 
 Allowed types: Article, Draft, Series, EditorialCalendar, Headline, Hook, Outline, KeyPoint, CallToAction, Subscriber, Segment, AudienceInsight, PerformanceMetric, DistributionChannel, PromotionPlan, RepurposingNote, StyleGuide, PositioningStatement, ContentExperiment, Feedback.

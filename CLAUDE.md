@@ -12,12 +12,15 @@ Use this plugin when the user is working on any type listed in README.md / `sche
 2. Check `schemas/okf-concepts/` for required fields.
 3. Call `python3 ${CLAUDE_PLUGIN_ROOT}/scripts/cme_common.py write ...`
 4. Link with typed `rel` values from `docs/typed-edges.md`.
-5. Offer `/cme-pack` if the user needs a session-sized subgraph.
+5. To cite research: `python3 ${CLAUDE_PLUGIN_ROOT}/scripts/cme_bridge.py --article … --finding finding.<slug>.<ulid>`. Never persist `informs`.
+6. Offer `/cme-pack` if the user needs a session-sized subgraph.
 
 ## Do not
 
 - Dump the whole knowledge tree into context. Use packs.
-- Write types owned by another plugin.
+- Write types owned by another plugin (including RKC Claim / Evidence / Finding).
+- Persist `informs`. It is a query-only inverse.
+- Auto-write `draws_from`. The human (or `/cme-bridge` when asked) owns the link.
 - Publish, send email, or apply to jobs unless the user explicitly confirms.
 
 <!-- worklog:policy:start -->
@@ -33,4 +36,3 @@ This plugin tracks implementation with [WikiTicket SDD](https://github.com/Spill
 - After changing work items, run `worklog roadmap-render` and commit the log and roadmap together.
 - CLI: `worklog` on PATH, or `python3 <wiki_ticket_sdd>/bin/worklog`.
 <!-- worklog:policy:end -->
-

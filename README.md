@@ -4,6 +4,8 @@ Content and audience ContentPack: articles, drafts, series, editorial calendar, 
 
 MIT. Dual-host: **Claude Code**, **Grok Build**, and **Codex** (Agent Skill Standard). Writes OKF Markdown + YAML into a shared second-brain bundle so other agents and local jobs can read the same graph.
 
+**v0.4.0 — Phase 5 Article bridge.** This plugin owns **Article → draws_from → Finding**. RKC never writes that edge. `research-graph` may expose `informs` as a query-only inverse. Never persist both directions.
+
 ## Install
 
 ```bash
@@ -23,8 +25,9 @@ Point the plugin at a shared knowledge root (default `knowledge/`). All sibling 
 |-------|----------------|
 | `/cme-init` | Scaffold the catalogs this plugin owns |
 | `/cme-capture` | Capture a noun into the shared second brain (deterministic write) |
+| `/cme-bridge` | Link an Article to an RKC Finding (`draws_from`). Never persist `informs`. |
 | `/cme-pack` | Build a bounded ContextPack from a root concept |
-| `/cme-validate` | Validate frontmatter, types, and links |
+| `/cme-validate` | Validate frontmatter, types, links, and the Article bridge |
 | `/cme-session` | Open or close an isolated write session (worktree + PR) |
 | `/cme-doctor` | Health check of the bundle this plugin owns |
 
@@ -53,6 +56,8 @@ Point the plugin at a shared knowledge root (default `knowledge/`). All sibling 
 | `ContentExperiment` | A/B or format test |
 | `Feedback` | Reader or editor feedback |
 
+Do **not** write RKC nouns (Claim, Evidence, Finding, …). Do not mint a second Article type in RKC.
+
 ## Relationships
 
 | `rel` | Meaning |
@@ -66,6 +71,9 @@ Point the plugin at a shared knowledge root (default `knowledge/`). All sibling 
 | `originates_from` | Came from experiment or outline |
 | `related_to` | Related pieces |
 | `supersedes` | Updated version |
+| `draws_from` | **Article → Finding** (RKC). Canonical stored edge. |
+
+`informs` is a **query-only** inverse. Validation fail-closes if it is persisted. See [docs/typed-edges.md](docs/typed-edges.md) and [docs/adr/002-article-bridge.md](docs/adr/002-article-bridge.md).
 
 ## Catalogs
 
@@ -90,8 +98,17 @@ python3 scripts/cme_common.py write \
   --author "Grok Bot: Content Media"
 ```
 
-Never invent `rel` values. Never write types owned by another plugin.
+Link an Article to a research Finding:
 
+```bash
+python3 scripts/cme_bridge.py \
+  --bundle knowledge \
+  --article <article-id-or-slug> \
+  --finding finding.<subject-slug>.<ulid> \
+  --author grok-bot/content-media
+```
+
+Never invent `rel` values. Never write types owned by another plugin. Never persist `informs`.
 
 
 ## Related plugins
@@ -109,6 +126,11 @@ Never invent `rel` values. Never write types owned by another plugin.
 - [gtm-positioning](https://github.com/SpillwaveSolutions/gtm-positioning)
 - [second-brain-marketplace](https://github.com/SpillwaveSolutions/second-brain-marketplace)
 - [second-brain-starter](https://github.com/SpillwaveSolutions/second-brain-starter)
+
+### Research second brain
+
+- [research-knowledge-capture](https://github.com/SpillwaveSolutions/research-knowledge-capture) — Layer 0. Owns Claims, Evidence, Findings. Does **not** write `draws_from`.
+- [research-graph](https://github.com/SpillwaveSolutions/research-graph) — Layer 1 projector. Derives `informs` as a query-only inverse.
 
 ### Foundation
 
