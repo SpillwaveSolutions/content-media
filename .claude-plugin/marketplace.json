@@ -10,8 +10,8 @@
     {
       "name": "content-media",
       "source": "./",
-      "description": "Content and audience ContentPack: articles, drafts, series, editorial calendar, subscribers, segments, and performance metrics.",
-      "version": "0.3.4",
+      "description": "Content and audience ContentPack: articles, drafts, series, editorial calendar, subscribers, segments, and performance metrics. Owns Article → draws_from → Finding.",
+      "version": "0.4.0",
       "author": {
         "name": "Rick Hightower"
       },
@@ -21,6 +21,8 @@
       "keywords": [
         "content",
         "article",
+        "draws_from",
+        "rkc",
         "substack",
         "medium",
         "subscriber",

@@ -1,10 +1,10 @@
 {
   "name": "content-media",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "private": true,
-  "description": "Content Media \u2014 Claude Code / Grok Build / Codex plugin",
+  "description": "Content Media — Claude Code / Grok Build / Codex plugin",
   "scripts": {
-    "test": "python3 tests/test_cme.py",
+    "test": "python3 tests/test_cme.py && python3 tests/test_bridge.py",
     "validate": "python3 scripts/cme_common.py validate --bundle sample-knowledge",
     "init": "python3 scripts/cme_common.py init-bundle --bundle sample-knowledge --title \"Content Media\" --catalogs \"articles,drafts,series,subscribers,segments,campaigns,experiments\""
   },

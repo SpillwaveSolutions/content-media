@@ -1,6 +1,6 @@
 ---
 name: cme-validate
-description: Validate Content Media concepts: required fields, types, and in-bundle links.
+description: Validate Content Media concepts: required fields, types, in-bundle links, and the Article → Finding bridge.
 ---
 
 # cme-validate
@@ -9,4 +9,9 @@ description: Validate Content Media concepts: required fields, types, and in-bun
 python3 "${CLAUDE_PLUGIN_ROOT}/scripts/cme_common.py" validate --bundle knowledge
 ```
 
-Fail on missing `type`/`title` or broken absolute links.
+Fail on:
+
+- missing `type` / `title`
+- broken absolute in-bundle links
+- persisted `informs` (query-only inverse — never store it)
+- `draws_from` whose target is not a Finding id (`finding.<slug>.<ulid>`)

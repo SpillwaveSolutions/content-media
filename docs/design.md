@@ -11,6 +11,7 @@ Session memory evaporates. This plugin gives one job function a typed, git-nativ
 3. Progressive disclosure via ContextPacks
 4. No hard-coded real-world client names in samples
 5. Dual-host plugin packaging
+6. Article → draws_from → Finding is the only stored research edge (ADR 002). Never persist `informs`.
 
 ## Nouns
 

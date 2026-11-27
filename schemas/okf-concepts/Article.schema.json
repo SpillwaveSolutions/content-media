@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "Article.schema.json",
   "title": "Article",
-  "description": "Published or publishable piece",
+  "description": "Published or publishable piece. May draw_from an RKC Finding.",
   "type": "object",
   "required": [
     "type",
@@ -11,6 +11,10 @@
   "properties": {
     "type": {
       "const": "Article"
+    },
+    "id": {
+      "type": "string",
+      "description": "Optional typed id, e.g. article.<subject-slug>.<ulid>"
     },
     "title": {
       "type": "string"

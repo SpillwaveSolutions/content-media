@@ -61,6 +61,28 @@ def load_owned_types() -> dict[str, str]:
 
 OWNED_TYPES = load_owned_types()
 
+# content-media owns Article → draws_from → Finding (RKC ADR 002).
+# informs is a query-only inverse derived by research-graph. Never persist it.
+QUERY_ONLY_RELS = {"informs"}
+FINDING_ID_RE = re.compile(r"^finding\.[a-z0-9-]{1,64}\.[0-9A-HJKMNP-TV-Z]{26}$")
+REGISTERED_RELS = {
+    "authored_by",
+    "belongs_to",
+    "promotes",
+    "engaged_with",
+    "distributed_on",
+    "measured_by",
+    "originates_from",
+    "related_to",
+    "supersedes",
+    "draws_from",
+    "documents",
+}
+
+
+def valid_finding_id(value: str) -> bool:
+    return bool(value and FINDING_ID_RE.match(value))
+
 
 def parse_frontmatter(text: str) -> tuple[dict, str]:
     if not text.startswith("---"):
@@ -314,6 +336,18 @@ def cmd_validate(args) -> int:
         for link in c["meta"].get("links") or []:
             if isinstance(link, dict):
                 target = link.get("target", "")
+                rel = link.get("rel")
+                if rel in QUERY_ONLY_RELS:
+                    errors.append(
+                        f"{c['path']}: do not persist {rel!r}; it is a query-only inverse"
+                    )
+                    continue
+                if rel == "draws_from":
+                    if not valid_finding_id(target or ""):
+                        errors.append(
+                            f"{c['path']}: draws_from target must be a Finding id, got {target!r}"
+                        )
+                    continue
                 if target.startswith("/") and not (bundle / target.lstrip("/")).exists():
                     errors.append(f"{c['path']}: broken link {target}")
     result = {"ok": len(errors) == 0, "concepts": len(seen), "errors": errors}
